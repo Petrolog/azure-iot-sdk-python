@@ -30,10 +30,6 @@ process_args()
 
 process_args $*
 
-# instruct C builder to include python library and to skip tests
-
-./c/build_all/linux/build.sh --build-python $PYTHON_VERSION --skip-unittests $*
-[ $? -eq 0 ] || exit $?
 cd $build_root
 
 echo copy iothub_client library to samples folder
