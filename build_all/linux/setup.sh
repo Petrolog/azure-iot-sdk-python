@@ -8,11 +8,6 @@
 build_root=$(cd "$(dirname "$0")/../../.." && pwd)
 cd $build_root
 
-# instruct C setup to install all dependent libraries
-
-./c/build_all/linux/setup.sh 
-[ $? -eq 0 ] || exit $?
-
 PYTHON_VERSION=2.7
 
 process_args()
